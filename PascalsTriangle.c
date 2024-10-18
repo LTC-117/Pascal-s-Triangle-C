@@ -5,18 +5,7 @@
 typedef unsigned long long ullong;
 
 //Factorial function:
-ullong fact(int a){
-    if(a == 0){
-        return 1;
-    }
-
-    ullong result = 1;
-    for(int i=1; i<=a; i++){
-        result *= i;
-    }
-
-    return result;
-}
+ullong fact(int a);
 
 int main(){
     ullong **pascals_triangle = malloc(21 * sizeof (ullong *));
@@ -49,3 +38,18 @@ int main(){
 
     return 0;
 }
+
+ullong fact(int a){
+    if(a == 0){
+        return 1;
+    }
+
+    ullong result = 1;
+    for(int i=1; i<=a; i++){
+        result *= i;
+    }
+
+    return result;
+}
+
+
